@@ -1,0 +1,191 @@
+<html>
+	<head>
+		<style type="text/css">
+			body{
+				background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+			}
+			.birthday{
+				justify-content:center;
+				left:50%;
+				top:50%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.box {
+				position: relative;
+				height: 150px;
+				width: 150px;
+				margin-top: 120px;
+				background-color: darkgreen;
+				border-bottom-left-radius: 5%;
+				border-bottom-right-radius: 5%;
+
+			}
+			.box::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 50px;
+				background: darkred;
+			}
+			.cap {
+				position: absolute;
+				z-index: 1;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: 90%;
+				height: 40px;
+				background-color:darkgreen;
+				height: 40px;
+				width: 170px;
+				border-radius: 5%;
+				/*animation: fire 0.9s ease-in-out infinite, color 0.4s linear infinite;*/
+				animation: up 0.4s ease-in-out forwards 1s infinite alternate;
+
+			}
+			@keyframes up {
+				100% {
+				    transform: translateY(-10px) rotate(20deg);
+				}
+			}
+			.cap::after {
+				content: "";
+		 		position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 50px;
+				background: darkred;
+			}
+			.rib {
+				z-index: 1;
+				height: 100%;
+			}
+			.rib::before, .rib::after {
+				content: "";
+				width: 30px;
+			    height: 30px;
+				border: 15px solid darkred;
+				border-radius: 50% 50% 0 50%;
+				position: absolute;
+				bottom: 99%;
+				z-index: -1;
+			}
+			.rib::before {
+			    left: 50%;
+			    transform: translateX(-100%) skew(10deg, 10deg);
+			}
+			.rib::after {
+			    left: 50%;
+			    transform: translateX(0%) rotate(90deg) skew(10deg, 10deg);
+			}
+			.oval{
+				height: 100px;
+				width: 80px;
+				background-color: yellow;
+				border-radius: 50%;
+				display: inline-flex;
+				box-shadow:inset -10px -10px 0 rgba(0,0,0,0.07);
+			}
+			.balloon{
+				animation:balloons 4s ease-in-out infinite;
+			}
+			@keyframes balloons {
+  0%,100%{ transform:translateY(0) rotate(-4deg); }
+  50%{ transform:translateY(-25px) rotate(4deg); }
+}
+			.stick{
+				position: relative;
+				height:100px;
+				width:100px;
+			}
+			.line {                                      
+			    position: absolute;
+			    width: 10px;
+			    height: 150%;
+			    top:-23px;
+				left: 5px;			   
+			    display: inline-block;
+			    transform: translate(390%) scale(0.7);
+			    overflow: hidden;
+			}
+			.l1 {
+			    background: linear-gradient(45deg, transparent, transparent 49%, darkred 49%, transparent 51%);
+			}
+			.l2 {
+			    background: linear-gradient(-45deg, transparent, transparent 49%, darkred 49%, transparent 51%);
+			}
+
+			.line {
+			    background-size: 20px 20px;
+			}
+			.ball{
+				text-align: center;
+			}
+			.topic {
+				text-transform: uppercase;
+				text-align: center;
+				letter-spacing: 3px;
+				font-size: 30px;
+				color: goldenrod;
+				margin: 15px 0;
+			}
+			.sub-topic{
+				animation: glow 1s ease-in-out infinite alternate;
+				text-align: center;
+				color:purple;
+				font-size: 75px;
+			}
+			img{
+				border-radius: 10px;
+				width: 250px;
+				height: 250px;
+				left:50%;
+				right: 50%;
+			}
+			@keyframes glow {
+			  from {
+			    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+			  }
+			  to {
+			    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+			  }
+			}
+
+		</style>
+	</head>
+	<body>
+		<section class="birthday">
+		<div class="topic">
+			<h2>
+				Happy Birthday Lady SuperStar
+			</h2>
+		</div>
+		<div class="sub-topic">
+			<h1>Nayanthara</h1>
+		</div>
+		<center><img src="C:\Users\91965\OneDrive\Desktop\Full Stack Training\Task-birthday card\nayan.jpeg"></center>
+		<div class="ball">
+			<div class="balloon">
+				<div class="oval"></div>
+				<div class="stick">
+					<div class="line l1"></div>
+					<div class="line l2"></div>
+				</div>
+			</div>
+		</div>
+		<div class="mul">
+			<div class="box">
+			    <div class="cap">       
+			        <div class="rib"></div>   
+			    </div>
+			</div>
+		</div>
+	</section>
+	</body>
+</html
